@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* Institutional Colors */
+  --institutional-blue: #1e40af;
+  --institutional-blue-light: #3b82f6;
+  --institutional-blue-dark: #1e3a8a;
+  --light-gray: #f8fafc;
+  --medium-gray: #e2e8f0;
+  --dark-gray: #475569;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Custom institutional color classes */
+.bg-institutional-blue {
+  background-color: var(--institutional-blue);
+}
+
+.bg-institutional-blue-light {
+  background-color: var(--institutional-blue-light);
+}
+
+.bg-institutional-blue-dark {
+  background-color: var(--institutional-blue-dark);
+}
+
+.bg-light-gray {
+  background-color: var(--light-gray);
+}
+
+.bg-medium-gray {
+  background-color: var(--medium-gray);
+}
+
+.text-institutional-blue {
+  color: var(--institutional-blue);
+}
+
+.text-institutional-blue-light {
+  color: var(--institutional-blue-light);
+}
+
+.text-institutional-blue-dark {
+  color: var(--institutional-blue-dark);
+}
+
+.text-dark-gray {
+  color: var(--dark-gray);
+}
+
+.border-institutional-blue {
+  border-color: var(--institutional-blue);
+}
+
+.border-light-gray {
+  border-color: var(--light-gray);
+}
+
+.border-medium-gray {
+  border-color: var(--medium-gray);
+}
+
+/* Hover states */
+.hover\:bg-institutional-blue-dark:hover {
+  background-color: var(--institutional-blue-dark);
+}
+
+.hover\:text-institutional-blue:hover {
+  color: var(--institutional-blue);
+}
+
+/* Focus states */
+.focus\:ring-institutional-blue:focus {
+  --tw-ring-color: var(--institutional-blue);
+}
+
+.focus\:border-institutional-blue:focus {
+  border-color: var(--institutional-blue);
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--institutional-blue);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--institutional-blue-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--institutional-blue);
+  border: 2px solid var(--institutional-blue);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: var(--institutional-blue);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Section spacing */
+.section-padding {
+  padding: 5rem 0;
+}
+
+/* Container max-width */
+.container-max {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-max {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-max {
+    padding: 0 2rem;
+  }
+}
