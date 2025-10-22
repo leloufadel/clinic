@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  /* Mauritanian flag colors */
+  --mauritania-green: #00732F;
+  --mauritania-gold: #FFD700;
+  --mauritania-red: #D01C1F;
+  --light-green: #E8F5E9;
+  --dark-green: #004D20;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-mauritania-green: #00732F;
+  --color-mauritania-gold: #FFD700;
+  --color-mauritania-red: #D01C1F;
+  --color-light-green: #E8F5E9;
+  --color-dark-green: #004D20;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-cairo), 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
