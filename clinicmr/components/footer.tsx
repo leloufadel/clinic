@@ -51,8 +51,8 @@ export default function Footer() {
                   <span className="text-white/80 text-lg">ولاية لعصابة، موريتانيا</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-3xl">📞</span>
-                  <span className="text-white/80 text-lg">متاح على مدار الساعة</span>
+                  <span className="text-3xl">📞 </span>
+                  <span className="text-white/80 text-lg">22 94 92 91</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-3xl">⏰</span>
